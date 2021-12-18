@@ -1,0 +1,28 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css", integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T", crossorigin="anonymous")
+        title Tabla productos
+    body
+        div(class="table-responsive" style="display: flex; justify-content: center; flex-direction: column; align-items: center;") 
+            h1(style="text-align: center; margin: 50px auto;") Tabla de productos
+            if productos.productos.length > 0
+                table(class="table" style="width: 80%; margin: 0 auto;")
+                    thead 
+                        tr
+                            th Nombre
+                            th Precio
+                            th Imagen
+                    tbody 
+                        each i in productos.productos  
+                            tr
+                                td= i.name
+                                td= i.price
+                                td
+                                    img(src=`${i.image}`, alt=`${i.name}` style="object-fit: contain; width: 50px;")
+            else 
+                h2(style="margin: 10px auto; color: red;") No hay datos para mostrar
+            <a href="/" class="btn btn-primary" style="padding: 10px 20px; width: 30%;margin-top: 40px;">Formulario</a>

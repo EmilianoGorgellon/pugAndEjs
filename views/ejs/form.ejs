@@ -1,0 +1,17 @@
+        <%- include ("./header.ejs") %> 
+        <title>Formulario</title>
+    </head>
+    <body>
+        <div>
+            <h1 style="text-align: center; margin: 20px 0"><%= formularioTitle %> </h1>
+            <form class="prod-form" action="/productos" method="POST">
+                <div class="d-flex flex-column align-items-center">
+                    <input type="text" name="name" class="form-control" placeholder="Nombre" style="margin-bottom: 10px;width: 50%;margin: 10px auto;">
+                    <input type="number" name="price" class="form-control" placeholder="Precio" style="margin-bottom: 10px;width: 50%;margin: 10px auto;">
+                    <input type="url" name="image" class="form-control" placeholder="Url de la foto" style="margin-bottom: 10px;width: 50%;margin: 10px auto;"/>
+                    <button type="submit" class="btn btn-primary">Ingresar Producto</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
